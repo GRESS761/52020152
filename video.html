@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El video que te tuve que dedicar hace mucho</title>
+  <style>
+    :root {
+      --morado: #7f00ff;
+      --azul: #0077ff;
+      --azul-morado: #5a00b0;
+      --blanco: #ffffff;
+    }
+
+    body {
+      background: linear-gradient(-45deg, var(--azul-morado), var(--morado), var(--azul));
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      line-height: 1.5;
+      animation: fadeUp 1.5s ease forwards;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--blanco);
+      background: linear-gradient(90deg, var(--morado), var(--azul));
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:hover {
+      background: linear-gradient(90deg, var(--azul), var(--morado));
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(127, 0, 255, 0.5);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🎬 Solo cambia el src cuando tengas tu video listo -->
+  <video controls>
+    <source src="video/IMG_7906.MOV" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <p>“Este video es una dedicatoria hecha con el corazón, porque algunas palabras solo se entienden cuando se sienten. Y te preguntaras por que se corta al final, y esa respuesta te la dare en llamada. 💜"</p>
+
+  <a href="galeria.html">📸 MOMENTOS INOLVIDABLES</a>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuerdos de todos los momentos juntos</title>
+  <style>
+    :root {
+      --morado: #7f00ff;
+      --azul: #0077ff;
+      --azul-morado: #5a00b0;
+      --blanco: #ffffff;
+    }
+
+    body {
+      background: linear-gradient(-45deg, var(--azul-morado), var(--morado), var(--azul));
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--blanco);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .foto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .fecha {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    .foto img {
+      width: 100%;
+      height: 350px; /* 🔹 Todas las fotos tendrán la misma altura */
+      object-fit: cover; /* 🔹 Recorta sin deformar, mantiene proporciones */
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .foto img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(127,0,255,0.6);
+    }
+
+    a {
+      margin-top: 2rem;
+      text-decoration: none;
+      color: var(--blanco);
+      background: linear-gradient(90deg, var(--morado), var(--azul));
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: linear-gradient(90deg, var(--azul), var(--morado));
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(127, 0, 255, 0.5);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🔹 Adaptación profesional a pantallas pequeñas */
+    @media (max-width: 600px) {
+      .foto img {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 MOMENTOS INOLVIDABLES</h1>
+
+  <div class="galeria">
+    <div class="foto">
+      <div class="fecha">7/06/2025</div>
+      <img src="img/IMG-20250607-WA0026.webp" alt="">
+    </div>
+    <div class="foto">
+      <div class="fecha">19/07/2025</div>
+      <img src="img/IMG20250719180112.webp" alt="">
+    </div>
+    <div class="foto">
+      <div class="fecha">20/07/2025</div>
+      <img src="img/IMG-20250720-WA0026.webp" alt="">
+    </div>
+    <div class="foto">
+      <div class="fecha">15/07/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.07_0b568dd4.jpg" alt="Recuerdo 1">
+    </div>
+    <div class="foto">
+      <div class="fecha">19/08/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.07_6e441948.jpg" alt="Recuerdo 2">
+    </div>
+    <div class="foto">
+      <div class="fecha">21/08/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.07_acc9a190.jpg" alt="Recuerdo 3">
+    </div>
+    <div class="foto">
+      <div class="fecha">22/08/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.07_4d893ed0.jpg" alt="Recuerdo 4">
+    </div>
+    <div class="foto">
+      <div class="fecha">04/09/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.08_8963e72b.jpg" alt="Recuerdo 5">
+    </div>
+    <div class="foto">
+      <div class="fecha">05/09/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.08_daf1e00c.jpg" alt="Recuerdo 6">
+    </div>
+    <div class="foto">
+      <div class="fecha">07/09/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.08_58fe5da7.jpg" alt="Recuerdo 7">
+    </div>
+    <div class="foto">
+      <div class="fecha">09/09/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.09_482005c1.jpg" alt="Recuerdo 8">
+    </div>
+    <div class="foto">
+      <div class="fecha">10/09/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.09_0c049428.jpg" alt="Recuerdo 9">
+    </div>
+    <div class="foto">
+      <div class="fecha">05/10/2025</div>
+      <img src="img/Imagen de WhatsApp 2025-10-24 a las 16.15.10_e7417153.jpg" alt="Recuerdo 10">
+    </div>
+  </div>
+
+  <a href="index.html">⬅ Volver al inicio</a>
+</body>
+</html>

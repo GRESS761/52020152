@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Si no existiera la luna, no me asustaria, por que mi luna eres tu</title>
+  <style>
+    /* Igual estructura CSS */
+    :root {--morado:#7f00ff;--azul:#0077ff;--azul-morado:#5a00b0;--blanco:#fff;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    body{background:linear-gradient(-45deg,var(--azul-morado),var(--azul),var(--morado));
+    background-size:300% 300%;animation:gradientShift 10s ease infinite;
+    min-height:100vh;display:flex;align-items:center;justify-content:center;color:var(--blanco);text-align:center;padding:2rem;}
+    .contenedor{background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);
+    border-radius:20px;padding:3rem 2rem;max-width:700px;width:100%;box-shadow:0 0 30px rgba(0,0,0,0.4);animation:fadeIn 1.3s ease forwards;}
+    .titulo{font-size:clamp(1.8rem,4vw,2.6rem);color: white;margin-bottom:1rem;animation:slideDown 1.2s ease forwards;}
+    .frase{font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.5;margin-bottom:2rem;opacity:0;animation:fadeUp 1.6s ease forwards 0.3s;}
+    a{text-decoration:none;color:var(--blanco);background:linear-gradient(90deg,var(--morado),var(--azul));padding:0.8rem 1.4rem;border-radius:10px;font-weight:600;display:inline-block;transition:all 0.3s ease;opacity:0;animation:fadeUp 1.6s ease forwards 0.6s;}
+    a:hover{background:linear-gradient(90deg,var(--azul),var(--morado));box-shadow:0 0 15px rgba(127,0,255,0.5);transform:translateY(-3px);}
+    @keyframes fadeIn{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1 class="titulo">Libro: A oscuras</h1>
+    <p class="frase">"No me importa si el mundo arde, mientras tú sigas siendo mi luz entre las sombras."<br> — Ariana Godoy</p>
+    <a href="index.html">⬅ Volver al inicio</a>
+  </div>
+</body>
+</html>
